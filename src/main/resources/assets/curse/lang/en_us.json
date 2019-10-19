@@ -1,0 +1,33 @@
+{
+  "enchantment.cursed.blindness": "Curse of Blindness",
+  "enchantment.cursed.curtail": "Curse of Curtail",
+  "enchantment.cursed.echo": "Curse of Echos",
+  "enchantment.cursed.encumbrance": "Curse of Encumbrance",
+  "enchantment.cursed.fading": "Curse of Fading",
+  "enchantment.cursed.fragility": "Curse of Fragility",
+  "enchantment.cursed.ignorance": "Curse of Ignorance",
+  "enchantment.cursed.insomnia": "Curse of Insomnia",
+  "enchantment.cursed.midas": "Curse of Midas",
+  "enchantment.cursed.misfortune": "Curse of Misfortune",
+  "enchantment.cursed.obedience": "Curse of Obedience",
+  "enchantment.cursed.radiance": "Curse of Radiance",
+  "enchantment.cursed.silence": "Curse of Silence",
+  "enchantment.cursed.sinking": "Curse of Sinking",
+  
+  "status.cursed.insomnia": "You feel restless and can not sleep.",
+  
+  "enchantment.cursed.blindness": "Drastically lowers the vision of the user.",
+  "enchantment.cursed.curtail.desc": "Decreases the block interaction range.",
+  "enchantment.cursed.echo.desc": "Causes random hostile mob sound effects to play.",
+  "enchantment.cursed.encumbrance.desc": "Slows down the players attack speed.",
+  "enchantment.cursed.fading.desc": "Causes the item to despawn faster when left on the ground.",
+  "enchantment.cursed.fragility.desc": "Depletes the durability of the item at a faster rate.",
+  "enchantment.cursed.ignorance.desc": "Breaking the wrong type of block will cause significantly more durability damage.",
+  "enchantment.cursed.insomnia.desc": "Prevents the wearer from sleeping.",
+  "enchantment.cursed.midas.desc": "Replaces block and mob loot with gold nuggets.",
+  "enchantment.cursed.misfortune.desc": "Significantly lowers the luck of the user.",
+  "enchantment.cursed.obedience.desc": "Only the first user will be able to use the item.",
+  "enchantment.cursed.radiance.desc": "Causes the wearer to glow brightly and be visible through blocks.",
+  "enchantment.cursed.silence.desc": "Prevents the wearer from making sounds.",
+  "enchantment.cursed.sinking.desc": "Causes the wearer to sink rapidly in water."
+}
