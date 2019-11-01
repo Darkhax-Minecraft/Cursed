@@ -1,0 +1,33 @@
+{
+  "enchantment.cursed.blindness": "Malédiction de cécité",
+  "enchantment.cursed.curtail": "Malédiction de raccourcissement",
+  "enchantment.cursed.echo": "Malédiction des échos",
+  "enchantment.cursed.encumbrance": "Malédiction d'encombrement",
+  "enchantment.cursed.fading": "Malédiction de disparition",
+  "enchantment.cursed.fragility": "Malédiction de fragilité",
+  "enchantment.cursed.ignorance": "Malédiction d'ignorance",
+  "enchantment.cursed.insomnia": "Malédiction d'insomnie",
+  "enchantment.cursed.midas": "Malédiction de Midas",
+  "enchantment.cursed.misfortune": "Malédiction de malchance",
+  "enchantment.cursed.obedience": "Malédiction d'obéissance",
+  "enchantment.cursed.radiance": "Malédiction de rayonnement",
+  "enchantment.cursed.silence": "Malédiction de silence",
+  "enchantment.cursed.sinking": "Malédiction de naufrage",
+  
+  "status.cursed.insomnia": "Vous ne vous sentez pas de dormir.",
+  
+  "enchantment.cursed.blindness": "Réduit radicalement la vision du porteur.",
+  "enchantment.cursed.curtail.desc": "Réduit la portée d'interaction avec les blocs.",
+  "enchantment.cursed.echo.desc": "Joue des sons de monstres aléatoires.",
+  "enchantment.cursed.encumbrance.desc": "Réduit la vitesse d'attaque.",
+  "enchantment.cursed.fading.desc": "L'objet disparaît plus rapidement sur le sol.",
+  "enchantment.cursed.fragility.desc": "L'objet se casse plus rapidement.",
+  "enchantment.cursed.ignorance.desc": "Miner le mauvais type de bloc abîme beacoup plus l'objet.",
+  "enchantment.cursed.insomnia.desc": "Empêche le porteur de dormir.",
+  "enchantment.cursed.midas.desc": "Remplace les drops des monstres et des blocs par de l'or.",
+  "enchantment.cursed.misfortune.desc": "Réduit radicalement la chance du porteur.",
+  "enchantment.cursed.obedience.desc": "Seul le premier porteur peut utiliser l'objet.",
+  "enchantment.cursed.radiance.desc": "Le porteur brille à travers les murs.",
+  "enchantment.cursed.silence.desc": "Empêche le porteur de faire du bruit.",
+  "enchantment.cursed.sinking.desc": "Le porteur coule dans l'eau."
+}
