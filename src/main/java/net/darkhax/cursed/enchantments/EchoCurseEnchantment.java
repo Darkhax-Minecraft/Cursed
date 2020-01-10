@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 import net.darkhax.tempshelf.CurseEnchantmentTicking;
+import net.darkhax.tempshelf.Utils;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -44,7 +45,7 @@ public class EchoCurseEnchantment extends CurseEnchantmentTicking {
                     
                     if (sound != null) {
                         
-                        user.world.playSound(null, user.posX, user.posY + 1, user.posZ, sound, SoundCategory.MASTER, 20f, 1f);
+                        user.world.playSound(null, Utils.getX(user), Utils.getY(user) + 1, Utils.getZ(user), sound, SoundCategory.MASTER, 20f, 1f);
                     }
                 }
                 
@@ -57,7 +58,8 @@ public class EchoCurseEnchantment extends CurseEnchantmentTicking {
     
     private LivingEntity getMobForChunk (World world, BlockPos pos) {
         
-        final Biome biome = world.getBiome(pos);
+    	// world.getBiomeManager().getBiome(pos);
+        final Biome biome = world.func_225523_d_().func_226836_a_(pos);
         
         if (biome != null) {
             
