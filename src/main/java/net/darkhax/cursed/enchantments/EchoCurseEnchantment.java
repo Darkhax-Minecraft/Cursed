@@ -25,7 +25,7 @@ public class EchoCurseEnchantment extends CurseEnchantmentTicking {
     
     public EchoCurseEnchantment() {
         
-        super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, new EquipmentSlotType[] { EquipmentSlotType.HEAD });
+        super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
         this.setRegistryName("cursed", "echo");
     }
     
