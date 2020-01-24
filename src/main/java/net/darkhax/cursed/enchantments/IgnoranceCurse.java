@@ -1,7 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
 import net.darkhax.tempshelf.CurseEnchantment;
-import net.darkhax.tempshelf.Utils;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
@@ -40,7 +39,7 @@ public class IgnoranceCurse extends CurseEnchantment {
                     item.attemptDamageItem(15 * level, event.getWorld().getRandom(), damagerEntity);
                     
                     final LivingEntity user = event.getPlayer();
-                    user.world.playSound(null, Utils.getX(user), Utils.getY(user) + 1, Utils.getZ(user), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                    user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
                 }
             }
         }

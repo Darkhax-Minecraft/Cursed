@@ -5,7 +5,6 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 import net.darkhax.tempshelf.CurseEnchantmentTicking;
-import net.darkhax.tempshelf.Utils;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -45,7 +44,7 @@ public class EchoCurseEnchantment extends CurseEnchantmentTicking {
                     
                     if (sound != null) {
                         
-                        user.world.playSound(null, Utils.getX(user), Utils.getY(user) + 1, Utils.getZ(user), sound, SoundCategory.MASTER, 20f, 1f);
+                        user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), sound, SoundCategory.MASTER, 20f, 1f);
                     }
                 }
                 

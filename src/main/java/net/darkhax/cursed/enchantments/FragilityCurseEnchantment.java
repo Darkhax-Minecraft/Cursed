@@ -1,7 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
 import net.darkhax.tempshelf.CurseEnchantment;
-import net.darkhax.tempshelf.Utils;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
@@ -41,7 +40,7 @@ public class FragilityCurseEnchantment extends CurseEnchantment {
                 
                 final ServerPlayerEntity damagerEntity = event.getPlayer() instanceof ServerPlayerEntity ? (ServerPlayerEntity) event.getPlayer() : null;
                 item.attemptDamageItem(1, event.getWorld().getRandom(), damagerEntity);
-                user.world.playSound(null, Utils.getX(user), Utils.getY(user) + 1, Utils.getZ(user), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
             }
         }
     }
@@ -60,7 +59,7 @@ public class FragilityCurseEnchantment extends CurseEnchantment {
                     final Entity damageSourcEntity = event.getSource().getImmediateSource();
                     final ServerPlayerEntity damagerEntity = damageSourcEntity instanceof ServerPlayerEntity ? (ServerPlayerEntity) damageSourcEntity : null;
                     item.attemptDamageItem(1, event.getEntityLiving().world.getRandom(), damagerEntity);
-                    user.world.playSound(null, Utils.getX(user), Utils.getY(user) + 1, Utils.getZ(user), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                    user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
                 }
             }
         }
@@ -78,7 +77,7 @@ public class FragilityCurseEnchantment extends CurseEnchantment {
                 
                 final ServerPlayerEntity damagerEntity = event.getEntityLiving() instanceof ServerPlayerEntity ? (ServerPlayerEntity) event.getEntityLiving() : null;
                 item.attemptDamageItem(1, event.getEntityLiving().world.getRandom(), damagerEntity);
-                user.world.playSound(null, Utils.getX(user), Utils.getY(user) + 1, Utils.getZ(user), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
             }
         }
     }
