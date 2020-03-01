@@ -68,18 +68,9 @@ minecraft {
     }
 }
 
-repositories {
-
-    maven {
-
-        url 'http://maven.mcmoddev.com'
-    }
-}
-
 dependencies {
 
     minecraft "net.minecraftforge:forge:${forge_version}"  
-    compile fg.deobf(project.dependencies.create("net.darkhax.enchdesc:EnchantmentDescriptions-1.15.1:${enchdesc_version}"))
 }
 
 jar {

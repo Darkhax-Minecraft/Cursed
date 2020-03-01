@@ -57,8 +57,7 @@ public class EchoCurseEnchantment extends CurseEnchantmentTicking {
     
     private LivingEntity getMobForChunk (World world, BlockPos pos) {
         
-    	// world.getBiomeManager().getBiome(pos);
-        final Biome biome = world.func_225523_d_().func_226836_a_(pos);
+        final Biome biome = world.getBiome(pos);
         
         if (biome != null) {
             
