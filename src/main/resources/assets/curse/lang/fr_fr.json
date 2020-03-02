@@ -16,7 +16,7 @@
   
   "status.cursed.insomnia": "Vous ne vous sentez pas de dormir.",
   
-  "enchantment.cursed.blindness": "Réduit radicalement la vision du porteur.",
+  "enchantment.cursed.blindness.desc": "Réduit radicalement la vision du porteur.",
   "enchantment.cursed.curtail.desc": "Réduit la portée d'interaction avec les blocs.",
   "enchantment.cursed.echo.desc": "Joue des sons de monstres aléatoires.",
   "enchantment.cursed.encumbrance.desc": "Réduit la vitesse d'attaque.",
