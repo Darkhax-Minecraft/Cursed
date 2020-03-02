@@ -1,0 +1,33 @@
+{
+  "enchantment.cursed.blindness": "失明诅咒",
+  "enchantment.cursed.curtail": "短手诅咒",
+  "enchantment.cursed.echo": "回响诅咒",
+  "enchantment.cursed.encumbrance": "沉重诅咒",
+  "enchantment.cursed.fading": "消逝诅咒",
+  "enchantment.cursed.fragility": "脆弱诅咒",
+  "enchantment.cursed.ignorance": "无知诅咒",
+  "enchantment.cursed.insomnia": "失眠诅咒",
+  "enchantment.cursed.midas": "点金诅咒",
+  "enchantment.cursed.misfortune": "厄运诅咒",
+  "enchantment.cursed.obedience": "服从诅咒",
+  "enchantment.cursed.radiance": "光辉诅咒",
+  "enchantment.cursed.silence": "沉默诅咒",
+  "enchantment.cursed.sinking": "沉沦诅咒",
+  
+  "status.cursed.insomnia": "你感到烦躁不安,难以入眠.",
+  
+  "enchantment.cursed.blindness": "大大地降低你的视野.",
+  "enchantment.cursed.curtail.desc": "降低方块交互范围.",
+  "enchantment.cursed.echo.desc": "在你的脑海内播放随机的怪物音效.",
+  "enchantment.cursed.encumbrance.desc": "降低攻速.",
+  "enchantment.cursed.fading.desc": "使掉落在地面上的物品更快地消失.",
+  "enchantment.cursed.fragility.desc": "物品的耐久度会更快地降低.",
+  "enchantment.cursed.ignorance.desc": "使用工具破坏错误类型的方块会降低更多的耐久度.",
+  "enchantment.cursed.insomnia.desc": "使穿戴者彻夜难眠.",
+  "enchantment.cursed.midas.desc": "将方块和怪物战利品替换为金粒.",
+  "enchantment.cursed.misfortune.desc": "大幅降低你的运气.",
+  "enchantment.cursed.obedience.desc": "只有一名玩家可以使用该物品.",
+  "enchantment.cursed.radiance.desc": "穿戴者会发光和透视.",
+  "enchantment.cursed.silence.desc": "穿戴者无法发出声音.",
+  "enchantment.cursed.sinking.desc": "穿戴者会更快地被水淹没."
+}
