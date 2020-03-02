@@ -1,0 +1,33 @@
+{
+  "enchantment.cursed.blindness": "실명 저주",
+  "enchantment.cursed.curtail": "단축 저주",
+  "enchantment.cursed.echo": "환청 저주",
+  "enchantment.cursed.encumbrance": "하중 저주",
+  "enchantment.cursed.fading": "분실 저주",
+  "enchantment.cursed.fragility": "파손 저주",
+  "enchantment.cursed.ignorance": "무식 저주",
+  "enchantment.cursed.insomnia": "불면 저주",
+  "enchantment.cursed.midas": "연금 저주",
+  "enchantment.cursed.misfortune": "불운 저주",
+  "enchantment.cursed.obedience": "귀속 저주",
+  "enchantment.cursed.radiance": "광휘 저주",
+  "enchantment.cursed.silence": "소음 저주",
+  "enchantment.cursed.sinking": "침몰 저주",
+  
+  "status.cursed.insomnia": "당신은 안절부절한 기분에 잠에 들지 못 합니다.",
+  
+  "enchantment.cursed.blindness.desc": "사용자의 시야범위를 대폭 낮춥니다.",
+  "enchantment.cursed.curtail.desc": "블록과 상호작용 가능한 거리를 줄입니다.",
+  "enchantment.cursed.echo.desc": "적대적인 생물이 내는 소리를 무작위로 재생합니다.",
+  "enchantment.cursed.encumbrance.desc": "공격속도를 늦춥니다.",
+  "enchantment.cursed.fading.desc": "땅 위에 버려진 아이템이 더 빨리 사라집니다.",
+  "enchantment.cursed.fragility.desc": "아이템의 내구도가 더 빨리 닳습니다.",
+  "enchantment.cursed.ignorance.desc": "용도에 어긋난 블록을 부술 때 내구도가 심각하게 소모됩니다.",
+  "enchantment.cursed.insomnia.desc": "착용자가 잠에 들지 못 하게 막습니다.",
+  "enchantment.cursed.midas.desc": "채굴하는 블록과 쓰러뜨린 적의 전리품을 금 조각으로 바꿉니다.",
+  "enchantment.cursed.misfortune.desc": "사용자의 운이 아주 나빠집니다.",
+  "enchantment.cursed.obedience.desc": "첫번째 사용자만이 이 아이템을 사용할 수 있습니다.",
+  "enchantment.cursed.radiance.desc": "착용자를 조금 빛나게 만들어 벽 너머에서도 보이게 합니다.",
+  "enchantment.cursed.silence.desc": "착용자가 소리를 내지 못하게 막습니다.",
+  "enchantment.cursed.sinking.desc": "착용자가 물에 더 빨리 가라앉게 만듭니다."
+}
