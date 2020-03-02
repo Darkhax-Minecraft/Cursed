@@ -16,7 +16,7 @@
   
   "status.cursed.insomnia": "You feel restless and can not sleep.",
   
-  "enchantment.cursed.blindness": "Drastically lowers the vision of the user.",
+  "enchantment.cursed.blindness.desc": "Drastically lowers the vision of the user.",
   "enchantment.cursed.curtail.desc": "Decreases the block interaction range.",
   "enchantment.cursed.echo.desc": "Causes random hostile mob sound effects to play.",
   "enchantment.cursed.encumbrance.desc": "Slows down the players attack speed.",

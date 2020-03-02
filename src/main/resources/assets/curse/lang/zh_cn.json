@@ -16,7 +16,7 @@
   
   "status.cursed.insomnia": "你感到烦躁不安,难以入眠.",
   
-  "enchantment.cursed.blindness": "大大地降低你的视野.",
+  "enchantment.cursed.blindness.desc": "大大地降低你的视野.",
   "enchantment.cursed.curtail.desc": "降低方块交互范围.",
   "enchantment.cursed.echo.desc": "在你的脑海内播放随机的怪物音效.",
   "enchantment.cursed.encumbrance.desc": "降低攻速.",
