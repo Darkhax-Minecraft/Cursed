@@ -1,0 +1,33 @@
+{
+  "enchantment.cursed.blindness": "Проклятие слепоты",
+  "enchantment.cursed.curtail": "Проклятие коротких рук",
+  "enchantment.cursed.echo": "Проклятие эха",
+  "enchantment.cursed.encumbrance": "Проклятие обременения",
+  "enchantment.cursed.fading": "Проклятие угасания",
+  "enchantment.cursed.fragility": "Проклятие хрупкости",
+  "enchantment.cursed.ignorance": "Проклятие невежества",
+  "enchantment.cursed.insomnia": "Проклятие бессонницы",
+  "enchantment.cursed.midas": "Проклятие Мидаса",
+  "enchantment.cursed.misfortune": "Проклятие несчастья",
+  "enchantment.cursed.obedience": "Проклятие покорности",
+  "enchantment.cursed.radiance": "Проклятие сияния",
+  "enchantment.cursed.silence": "Проклятие безмолвия",
+  "enchantment.cursed.sinking": "Проклятие тонущего",
+
+  "status.cursed.insomnia": "Вы чувствуете беспокойство и не можете заснуть",
+
+  "enchantment.cursed.blindness.desc": "Резко снижает видимость.",
+  "enchantment.cursed.curtail.desc": "Уменьшает расстояние для взаимодействия с блоком.",
+  "enchantment.cursed.echo.desc": "Вызывает случайные звуки враждебных мобов.",
+  "enchantment.cursed.encumbrance.desc": "Уменьшает скорость атаки.",
+  "enchantment.cursed.fading.desc": "Предмет, упавший на землю, исчезнет быстрее.",
+  "enchantment.cursed.fragility.desc": "Прочность предмета снижается быстрее.",
+  "enchantment.cursed.ignorance.desc": "Разрушение инструментом неправильного типа блока приведёт к значительному снижению прочности.",
+  "enchantment.cursed.insomnia.desc": "Не позволяет игроку спать.",
+  "enchantment.cursed.midas.desc": "Заменяет добычу с блоков и мобов на золотые самородки.",
+  "enchantment.cursed.misfortune.desc": "Значительно снижает удачу.",
+  "enchantment.cursed.obedience.desc": "Только первый владелец сможет использовать этот предмет.",
+  "enchantment.cursed.radiance.desc": "Владелец будет ярко светиться и виден сквозь блоки.",
+  "enchantment.cursed.silence.desc": "Не позволяет владельцу издавать звуки.",
+  "enchantment.cursed.sinking.desc": "Владелец будет быстро тонуть в воде."
+}
