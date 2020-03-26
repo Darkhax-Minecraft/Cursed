@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantment;
+import net.darkhax.bookshelf.enchantment.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.player.PlayerEntity.SleepResult;
@@ -11,14 +11,13 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 
-public class InsomniaCureEnchantment extends CurseEnchantment {
+public class InsomniaCureEnchantment extends EnchantmentCurse {
     
     private static final ITextComponent INSOMNIA_MESSAGE = new TranslationTextComponent("status.cursed.insomnia");
     
     public InsomniaCureEnchantment() {
         
         super(EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
-        this.setRegistryName("cursed", "insomnia");
         MinecraftForge.EVENT_BUS.addListener(this::playerSleepEvent);
     }
     

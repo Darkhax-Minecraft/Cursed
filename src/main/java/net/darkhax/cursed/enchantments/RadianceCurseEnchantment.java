@@ -1,18 +1,17 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantmentTicking;
+import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class RadianceCurseEnchantment extends CurseEnchantmentTicking {
+public class RadianceCurseEnchantment extends EnchantmentTickingCurse {
     
     public RadianceCurseEnchantment() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST, EquipmentSlotType.CHEST);
-        this.setRegistryName("cursed", "radiance");
     }
     
     @Override

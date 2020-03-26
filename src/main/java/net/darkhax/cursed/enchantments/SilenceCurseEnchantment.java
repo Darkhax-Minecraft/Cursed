@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantment;
+import net.darkhax.bookshelf.enchantment.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
@@ -8,12 +8,11 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.PlaySoundAtEntityEvent;
 
-public class SilenceCurseEnchantment extends CurseEnchantment {
+public class SilenceCurseEnchantment extends EnchantmentCurse {
     
     public SilenceCurseEnchantment() {
         
         super(EnchantmentType.ARMOR_FEET, EquipmentSlotType.FEET);
-        this.setRegistryName("cursed", "silence");
         MinecraftForge.EVENT_BUS.addListener(this::onEntitySound);
     }
     

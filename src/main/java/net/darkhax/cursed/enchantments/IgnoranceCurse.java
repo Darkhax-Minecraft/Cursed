@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantment;
+import net.darkhax.bookshelf.enchantment.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
@@ -13,12 +13,11 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class IgnoranceCurse extends CurseEnchantment {
+public class IgnoranceCurse extends EnchantmentCurse {
     
     public IgnoranceCurse() {
         
         super(EnchantmentType.DIGGER, EquipmentSlotType.MAINHAND);
-        this.setRegistryName("cursed", "ignorance");
         
         MinecraftForge.EVENT_BUS.addListener(this::onBlockBreak);
     }

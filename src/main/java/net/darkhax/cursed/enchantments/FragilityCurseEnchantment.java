@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantment;
+import net.darkhax.bookshelf.enchantment.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
@@ -15,13 +15,11 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class FragilityCurseEnchantment extends CurseEnchantment {
+public class FragilityCurseEnchantment extends EnchantmentCurse {
     
     public FragilityCurseEnchantment() {
         
         super(EnchantmentType.BREAKABLE, EquipmentSlotType.values());
-        
-        this.setRegistryName("cursed", "fragility");
         
         MinecraftForge.EVENT_BUS.addListener(this::onBlockBreak);
         MinecraftForge.EVENT_BUS.addListener(this::onLivingHurt);

@@ -2,21 +2,20 @@ package net.darkhax.cursed.enchantments;
 
 import java.util.UUID;
 
-import net.darkhax.tempshelf.CurseEnchantmentTicking;
+import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 
-public class ObedienceCurseEnchantment extends CurseEnchantmentTicking {
+public class ObedienceCurseEnchantment extends EnchantmentTickingCurse {
     
     private static final String NBT_KEY = "ObedienceOwnerId";
     
     public ObedienceCurseEnchantment() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ALL, EquipmentSlotType.values());
-        this.setRegistryName("cursed", "obedience");
     }
     
     @Override

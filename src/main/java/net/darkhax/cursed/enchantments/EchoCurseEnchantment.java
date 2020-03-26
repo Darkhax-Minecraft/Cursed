@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 
-import net.darkhax.tempshelf.CurseEnchantmentTicking;
+import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityClassification;
@@ -19,14 +19,13 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.SpawnListEntry;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
-public class EchoCurseEnchantment extends CurseEnchantmentTicking {
+public class EchoCurseEnchantment extends EnchantmentTickingCurse {
     
     private final Method playSound = ObfuscationReflectionHelper.findMethod(MobEntity.class, "func_184639_G");
     
     public EchoCurseEnchantment() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
-        this.setRegistryName("cursed", "echo");
     }
     
     @Override

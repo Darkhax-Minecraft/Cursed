@@ -1,17 +1,16 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantmentTicking;
+import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.util.math.Vec3d;
 
-public class SinkingCurseEnchantment extends CurseEnchantmentTicking {
+public class SinkingCurseEnchantment extends EnchantmentTickingCurse {
     
     public SinkingCurseEnchantment() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ARMOR_FEET, EquipmentSlotType.FEET);
-        this.setRegistryName("cursed", "sinking");
     }
     
     @Override

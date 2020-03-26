@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.tempshelf.CurseEnchantment;
+import net.darkhax.bookshelf.enchantment.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
@@ -12,12 +12,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.TickEvent.Phase;
 
-public class FadingCurseEnchantment extends CurseEnchantment {
+public class FadingCurseEnchantment extends EnchantmentCurse {
     
     public FadingCurseEnchantment() {
         
         super(EnchantmentType.ALL, EquipmentSlotType.values());
-        this.setRegistryName("cursed", "fading");
         MinecraftForge.EVENT_BUS.addListener(this::onEntityTick);
     }
     
