@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[28,)"
-issueTrackerURL="https://github.com/Darkhax-Minecraft/Friendly-Fire/issues"
+issueTrackerURL="https://github.com/Darkhax-Minecraft/Cursed/issues"
 
 [[mods]]
 modId="cursed"

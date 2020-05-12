@@ -33,8 +33,8 @@ public class CursedMod {
         registry.register(new EncumbranceCurseEnchantment());
         registry.register(new FadingCurseEnchantment());
         registry.register(new FragilityCurseEnchantment());
-        registry.register(new IgnoranceCurse());
-        registry.register(new InsomniaCureEnchantment());
+        registry.register(new IgnoranceCurseEnchantment());
+        registry.register(new InsomniaCurseEnchantment());
         registry.register(new MidasCurseEnchantment());
         registry.register(new MisfortuneCurseEnchantment());
         registry.register(new ObedienceCurseEnchantment());
