@@ -30,7 +30,7 @@ public class CursedMod {
         this.registry.registerEnchantment(new EncumbranceCurseEnchantment(), "encumbrance");
         this.registry.registerEnchantment(new FadingCurseEnchantment(), "fading");
         this.registry.registerEnchantment(new FragilityCurseEnchantment(), "fragility");
-        this.registry.registerEnchantment(new IgnoranceCurse(), "ignorance");
+        this.registry.registerEnchantment(new IgnoranceCurseEnchantment(), "ignorance");
         this.registry.registerEnchantment(new InsomniaCurseEnchantment(), "insomnia");
         this.registry.registerEnchantment(new MidasCurseEnchantment(), "midas");
         this.registry.registerEnchantment(new MisfortuneCurseEnchantment(), "misfortune");
