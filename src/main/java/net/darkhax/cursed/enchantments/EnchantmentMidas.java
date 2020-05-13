@@ -1,42 +1,53 @@
 package net.darkhax.cursed.enchantments;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nonnull;
+
+import com.google.gson.JsonObject;
+
 import net.darkhax.bookshelf.enchantment.EnchantmentModifierCurse;
 import net.darkhax.cursed.CursedMod;
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.storage.loot.conditions.ILootCondition;
+import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
+import net.minecraftforge.common.loot.LootModifier;
 
 public class EnchantmentMidas extends EnchantmentModifierCurse {
+    
+    public static final GlobalLootModifierSerializer<MidasModifier> SERIALIZER = new Serializer();
     
     public EnchantmentMidas() {
         
         super(CursedMod.TOOL, EquipmentSlotType.MAINHAND);
-        
-        MinecraftForge.EVENT_BUS.addListener(this::onLivingDrops);
     }
     
-    private void onLivingDrops (LivingDropsEvent event) {
+    static class MidasModifier extends LootModifier {
         
-        final Entity looter = event.getSource().getTrueSource();
+        private MidasModifier(ILootCondition[] conditionsIn) {
+            
+            super(conditionsIn);
+        }
         
-        if (looter instanceof LivingEntity) {
+        @Nonnull
+        @Override
+        protected List<ItemStack> doApply (List<ItemStack> generatedLoot, LootContext context) {
             
-            final ItemStack heldItem = ((LivingEntity) looter).getHeldItemMainhand();
-            final int level = EnchantmentHelper.getEnchantmentLevel(this, heldItem);
+            return generatedLoot.stream().map(stack -> stack = new ItemStack(Items.GOLD_NUGGET)).collect(Collectors.toList());
+        }
+    }
+
+    static class Serializer extends GlobalLootModifierSerializer<MidasModifier> {
+        
+        @Override
+        public MidasModifier read (ResourceLocation name, JsonObject json, ILootCondition[] conditions) {
             
-            if (level > 0) {
-                
-                for (final ItemEntity item : event.getDrops()) {
-                    
-                    item.setItem(new ItemStack(Items.GOLD_NUGGET, 1));
-                }
-            }
+            return new MidasModifier(conditions);
         }
     }
 }

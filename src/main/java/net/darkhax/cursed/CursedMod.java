@@ -16,6 +16,7 @@ import net.darkhax.cursed.enchantments.EnchantmentMidas;
 import net.darkhax.cursed.enchantments.EnchantmentMisfortune;
 import net.darkhax.cursed.enchantments.EnchantmentObedience;
 import net.darkhax.cursed.enchantments.EnchantmentRadiance;
+import net.darkhax.cursed.enchantments.EnchantmentRuin;
 import net.darkhax.cursed.enchantments.EnchantmentSilence;
 import net.darkhax.cursed.enchantments.EnchantmentSinking;
 import net.minecraft.enchantment.EnchantmentType;
@@ -46,8 +47,10 @@ public class CursedMod {
         this.registry.registerEnchantment(new EnchantmentRadiance(), "radiance");
         this.registry.registerEnchantment(new EnchantmentSilence(), "silence");
         this.registry.registerEnchantment(new EnchantmentSinking(), "sinking");
+        this.registry.registerEnchantment(new EnchantmentRuin(), "ruin");
         
-        this.registry.registerGlobalModifier(MidasDropModifier.SERIALIZER, "midas_modifier");
+        this.registry.registerGlobalModifier(EnchantmentMidas.SERIALIZER, "midas_modifier");
+        
         this.registry.initialize(FMLJavaModLoadingContext.get().getModEventBus());
     }
 }

@@ -1,0 +1,18 @@
+{
+  "type": "cursed:midas_modifier",
+  "conditions": [
+    {
+      "condition": "bookshelf:check_item",
+      "predicate": {
+        "enchantments": [
+          {
+            "enchantment": "cursed:midas",
+            "levels": {
+              "min": 1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
