@@ -6,9 +6,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.util.math.Vec3d;
 
-public class SinkingCurseEnchantment extends EnchantmentTickingCurse {
+public class EnchantmentSinking extends EnchantmentTickingCurse {
     
-    public SinkingCurseEnchantment() {
+    public EnchantmentSinking() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ARMOR_FEET, EquipmentSlotType.FEET);
     }

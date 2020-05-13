@@ -4,16 +4,16 @@ import java.util.UUID;
 
 import net.darkhax.bookshelf.enchantment.EnchantmentModifierCurse;
 import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.AttributeModifier.Operation;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 
-public class CurtailCurseEnchantment extends EnchantmentModifierCurse {
+public class EnchantmentEncumbrance extends EnchantmentModifierCurse {
     
-    public CurtailCurseEnchantment() {
+    public EnchantmentEncumbrance() {
         
         super(Rarity.VERY_RARE, EnchantmentType.DIGGER, EquipmentSlotType.MAINHAND);
-        this.addAttributeModifier(PlayerEntity.REACH_DISTANCE, new AttributeModifier(UUID.fromString("0b8f89c3-892f-4b71-bdca-58cc20ce8ee0"), "Curse of Curtail", -0.35d, Operation.MULTIPLY_TOTAL));
+        this.addAttributeModifier(SharedMonsterAttributes.ATTACK_SPEED, new AttributeModifier(UUID.fromString("ddc9c1e8-936c-452e-a93f-3f65787dfa94"), "Curse of Encumbrance", -0.35d, Operation.MULTIPLY_TOTAL));
     }
 }

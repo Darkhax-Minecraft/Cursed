@@ -9,11 +9,11 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.inventory.EquipmentSlotType;
 
-public class MisfortuneCurseEnchantment extends EnchantmentModifierCurse {
+public class EnchantmentMisfortune extends EnchantmentModifierCurse {
     
     private final AttributeModifier modifier = new AttributeModifier(UUID.fromString("b8ebd2cb-02d2-4c78-884d-12ee6d863e5e"), "Curse of Misfortune", 5f, Operation.ADDITION);
     
-    public MisfortuneCurseEnchantment() {
+    public EnchantmentMisfortune() {
         
         super(CursedMod.TOOL, EquipmentSlotType.MAINHAND);
         this.addAttributeModifier(SharedMonsterAttributes.LUCK, this.modifier);

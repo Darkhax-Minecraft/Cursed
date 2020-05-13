@@ -7,7 +7,7 @@ import javax.annotation.Nonnull;
 
 import com.google.gson.JsonObject;
 
-import net.darkhax.cursed.enchantments.MidasCurseEnchantment;
+import net.darkhax.cursed.enchantments.EnchantmentMidas;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -35,7 +35,7 @@ public class MidasDropModifier extends LootModifier {
         
         if (tool != null && !tool.isEmpty()) {
             
-            final int midasLevel = EnchantmentHelper.getEnchantmentLevel(new MidasCurseEnchantment(), context.get(LootParameters.TOOL));
+            final int midasLevel = EnchantmentHelper.getEnchantmentLevel(new EnchantmentMidas(), context.get(LootParameters.TOOL));
             
             if (midasLevel > 0) {
                 

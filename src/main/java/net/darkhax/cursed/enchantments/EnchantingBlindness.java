@@ -7,11 +7,11 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class RadianceCurseEnchantment extends EnchantmentTickingCurse {
+public class EnchantingBlindness extends EnchantmentTickingCurse {
     
-    public RadianceCurseEnchantment() {
+    public EnchantingBlindness() {
         
-        super(Rarity.VERY_RARE, EnchantmentType.ARMOR_CHEST, EquipmentSlotType.CHEST);
+        super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
     }
     
     @Override
@@ -19,7 +19,7 @@ public class RadianceCurseEnchantment extends EnchantmentTickingCurse {
         
         if (level > 0) {
             
-            user.addPotionEffect(new EffectInstance(Effects.GLOWING, 100, 0, false, false));
+            user.addPotionEffect(new EffectInstance(Effects.BLINDNESS, 100, 0, false, false));
         }
     }
 }

@@ -12,9 +12,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.TickEvent.Phase;
 
-public class FadingCurseEnchantment extends EnchantmentCurse {
+public class EnchantmentFading extends EnchantmentCurse {
     
-    public FadingCurseEnchantment() {
+    public EnchantmentFading() {
         
         super(EnchantmentType.ALL, EquipmentSlotType.values());
         MinecraftForge.EVENT_BUS.addListener(this::onEntityTick);

@@ -15,9 +15,9 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class FragilityCurseEnchantment extends EnchantmentCurse {
+public class EnchantmentFragility extends EnchantmentCurse {
     
-    public FragilityCurseEnchantment() {
+    public EnchantmentFragility() {
         
         super(EnchantmentType.BREAKABLE, EquipmentSlotType.values());
         

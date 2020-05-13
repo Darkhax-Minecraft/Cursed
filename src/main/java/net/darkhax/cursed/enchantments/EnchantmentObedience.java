@@ -9,11 +9,11 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 
-public class ObedienceCurseEnchantment extends EnchantmentTickingCurse {
+public class EnchantmentObedience extends EnchantmentTickingCurse {
     
     private static final String NBT_KEY = "ObedienceOwnerId";
     
-    public ObedienceCurseEnchantment() {
+    public EnchantmentObedience() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ALL, EquipmentSlotType.values());
     }

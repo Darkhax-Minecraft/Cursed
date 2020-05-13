@@ -12,9 +12,9 @@ import net.minecraft.item.Items;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
-public class MidasCurseEnchantment extends EnchantmentModifierCurse {
+public class EnchantmentMidas extends EnchantmentModifierCurse {
     
-    public MidasCurseEnchantment() {
+    public EnchantmentMidas() {
         
         super(CursedMod.TOOL, EquipmentSlotType.MAINHAND);
         

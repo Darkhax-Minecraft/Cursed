@@ -19,11 +19,11 @@ import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.Biome.SpawnListEntry;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
-public class EchoCurseEnchantment extends EnchantmentTickingCurse {
+public class EnchantmentEcho extends EnchantmentTickingCurse {
     
     private final Method playSound = ObfuscationReflectionHelper.findMethod(MobEntity.class, "func_184639_G");
     
-    public EchoCurseEnchantment() {
+    public EnchantmentEcho() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
     }
