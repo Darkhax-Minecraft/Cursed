@@ -13,6 +13,8 @@
   "enchantment.cursed.radiance": "Проклятие сияния",
   "enchantment.cursed.silence": "Проклятие безмолвия",
   "enchantment.cursed.sinking": "Проклятие тонущего",
+  "enchantment.cursed.ruin": "Проклятие руины",
+  "enchantment.cursed.dullness": "Проклятие тупого лезвия",
 
   "status.cursed.insomnia": "Вы чувствуете беспокойство и не можете заснуть",
 
@@ -29,5 +31,7 @@
   "enchantment.cursed.obedience.desc": "Только первый владелец сможет использовать этот предмет.",
   "enchantment.cursed.radiance.desc": "Владелец будет ярко светиться и виден сквозь блоки.",
   "enchantment.cursed.silence.desc": "Не позволяет владельцу издавать звуки.",
-  "enchantment.cursed.sinking.desc": "Владелец будет быстро тонуть в воде."
+  "enchantment.cursed.sinking.desc": "Владелец будет быстро тонуть в воде.",
+  "enchantment.cursed.ruin.desc": "Не позволяет ремонтировать инструмент в наковальне.",
+  "enchantment.cursed.dullness.desc": "Снижает урон у предмета."
 }
