@@ -13,26 +13,27 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 public class MidasCurseEnchantment extends EnchantmentModifierCurse {
-
+    
     public MidasCurseEnchantment() {
+        
         super(CursedMod.TOOL, EquipmentSlotType.MAINHAND);
-
+        
         MinecraftForge.EVENT_BUS.addListener(this::onLivingDrops);
     }
-
+    
     private void onLivingDrops (LivingDropsEvent event) {
-
+        
         final Entity looter = event.getSource().getTrueSource();
-
+        
         if (looter instanceof LivingEntity) {
-
+            
             final ItemStack heldItem = ((LivingEntity) looter).getHeldItemMainhand();
             final int level = EnchantmentHelper.getEnchantmentLevel(this, heldItem);
-
+            
             if (level > 0) {
-
+                
                 for (final ItemEntity item : event.getDrops()) {
-
+                    
                     item.setItem(new ItemStack(Items.GOLD_NUGGET, 1));
                 }
             }
