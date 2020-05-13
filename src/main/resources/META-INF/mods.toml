@@ -16,7 +16,7 @@ ${mod_description}
 [[dependencies.cursed]]
     modId="forge"
     mandatory=true
-    versionRange="[31,)"
+    versionRange="[31.1.18,)"
     ordering="NONE"
     side="BOTH"
 

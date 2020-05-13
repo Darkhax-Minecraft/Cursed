@@ -11,11 +11,11 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 
-public class InsomniaCureEnchantment extends EnchantmentCurse {
+public class InsomniaCurseEnchantment extends EnchantmentCurse {
     
     private static final ITextComponent INSOMNIA_MESSAGE = new TranslationTextComponent("status.cursed.insomnia");
     
-    public InsomniaCureEnchantment() {
+    public InsomniaCurseEnchantment() {
         
         super(EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
         MinecraftForge.EVENT_BUS.addListener(this::playerSleepEvent);

@@ -13,9 +13,9 @@ import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class IgnoranceCurse extends EnchantmentCurse {
+public class IgnoranceCurseEnchantment extends EnchantmentCurse {
     
-    public IgnoranceCurse() {
+    public IgnoranceCurseEnchantment() {
         
         super(EnchantmentType.DIGGER, EquipmentSlotType.MAINHAND);
         
