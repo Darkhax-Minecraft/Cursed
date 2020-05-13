@@ -13,9 +13,9 @@ import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
 
-public class IgnoranceCurse extends CurseEnchantment {
+public class IgnoranceCurseEnchantment extends CurseEnchantment {
     
-    public IgnoranceCurse() {
+    public IgnoranceCurseEnchantment() {
         
         super(EnchantmentType.DIGGER, EquipmentSlotType.MAINHAND);
         this.setRegistryName("cursed", "ignorance");
@@ -39,7 +39,7 @@ public class IgnoranceCurse extends CurseEnchantment {
                     item.attemptDamageItem(15 * level, event.getWorld().getRandom(), damagerEntity);
                     
                     final LivingEntity user = event.getPlayer();
-                    user.world.playSound(null, user.posX, user.posY + 1, user.posZ, SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                    user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
                 }
             }
         }

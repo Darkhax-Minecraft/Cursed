@@ -7,8 +7,9 @@ Do you feel like enchantments are too fun? Then this is the mod for you! This mo
 - **Curse of Encumbrance** -  Slows down the attack speed of the user. This curse affects weapons.
 - **Curse of Fading** - Causes items to despawn significantly faster when dropped on the ground. This curse affects all items.
 - **Curse of Fragility** - Causes the durability of the item to deplete faster. This curse affects all items with durability.
-- **Curse of Ignorance** - Braking the wrong type of block will cause significant durability damage. This curse affects all tools.
+- **Curse of Ignorance** - Breaking the wrong type of block will cause significant durability damage. This curse affects all tools.
 - **Curse of Insomnia** - Prevents the wearer from sleeping. This curse affects helmets.
+- **Curse of Midas** - Replaces block and mob loot with gold nuggets.
 - **Curse of Misfortune** - Significantly lowers the users luck. This curse affects tools and weapons. 
 - **Curse of Obedience** - Binds itself to the first user that holds it. Prevents everyone else from using it. This curse affects all items.
 - **Curse of Radiance** - Causes the wearer to glow brightly and be visible through blocks. This curse affects chest plates.

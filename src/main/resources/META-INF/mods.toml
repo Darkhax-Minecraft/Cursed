@@ -1,6 +1,6 @@
 modLoader="javafml"
 loaderVersion="[28,)"
-issueTrackerURL="https://github.com/Darkhax-Minecraft/Friendly-Fire/issues"
+issueTrackerURL="https://github.com/Darkhax-Minecraft/Cursed/issues"
 
 [[mods]]
 modId="cursed"
@@ -16,7 +16,7 @@ ${mod_description}
 [[dependencies.cursed]]
     modId="forge"
     mandatory=true
-    versionRange="[28,)"
+    versionRange="[28.2.4,)"
     ordering="NONE"
     side="SERVER"
 
