@@ -4,6 +4,7 @@ issueTrackerURL="https://github.com/Darkhax-Minecraft/Cursed/issues"
 
 [[mods]]
 modId="cursed"
+updateJSONURL="https://updates.blamejared.com/get?n=cursed&gv=1.15.2"
 version="${version}"
 displayName="${mod_name}"
 displayURL="${mod_download}"
