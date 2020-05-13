@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import net.darkhax.bookshelf.registry.RegistryHelper;
 import net.darkhax.cursed.enchantments.EnchantingBlindness;
 import net.darkhax.cursed.enchantments.EnchantmentCurtail;
+import net.darkhax.cursed.enchantments.EnchantmentDullness;
 import net.darkhax.cursed.enchantments.EnchantmentEcho;
 import net.darkhax.cursed.enchantments.EnchantmentEncumbrance;
 import net.darkhax.cursed.enchantments.EnchantmentFading;
@@ -48,6 +49,7 @@ public class CursedMod {
         this.registry.registerEnchantment(new EnchantmentSilence(), "silence");
         this.registry.registerEnchantment(new EnchantmentSinking(), "sinking");
         this.registry.registerEnchantment(new EnchantmentRuin(), "ruin");
+        this.registry.registerEnchantment(new EnchantmentDullness(), "dullness");
         
         this.registry.registerGlobalModifier(EnchantmentMidas.SERIALIZER, "midas_modifier");
         

@@ -14,6 +14,7 @@
   "enchantment.cursed.silence": "Curse of Silence",
   "enchantment.cursed.sinking": "Curse of Sinking",
   "enchantment.cursed.ruin": "Curse of Ruin",
+  "enchantment.cursed.dullness": "Curse of Dullness",
   
   "status.cursed.insomnia": "You feel restless and can not sleep.",
   
@@ -31,5 +32,6 @@
   "enchantment.cursed.radiance.desc": "Causes the wearer to glow brightly and be visible through blocks.",
   "enchantment.cursed.silence.desc": "Prevents the wearer from making sounds.",
   "enchantment.cursed.sinking.desc": "Causes the wearer to sink rapidly in water.",
-  "enchantment.cursed.ruin.desc": "Prevents the tool from being repaired in an anvil."
+  "enchantment.cursed.ruin.desc": "Prevents the tool from being repaired in an anvil.",
+  "enchantment.cursed.dullness.desc": "Lowers the attack damage of the item."
 }
