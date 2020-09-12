@@ -1,13 +1,13 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
+import net.darkhax.bookshelf.enchantment.EnchantmentTicking;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 
-public class EnchantingBlindness extends EnchantmentTickingCurse {
+public class EnchantingBlindness extends EnchantmentTicking {
     
     public EnchantingBlindness() {
         

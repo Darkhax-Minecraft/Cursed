@@ -2,7 +2,7 @@ package net.darkhax.cursed.enchantments;
 
 import java.util.UUID;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
+import net.darkhax.cursed.lib.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -15,7 +15,7 @@ public class EnchantmentObedience extends EnchantmentTickingCurse {
     
     public EnchantmentObedience() {
         
-        super(Rarity.VERY_RARE, EnchantmentType.ALL, EquipmentSlotType.values());
+        super(Rarity.VERY_RARE, EnchantmentType.VANISHABLE, EquipmentSlotType.values());
     }
     
     @Override

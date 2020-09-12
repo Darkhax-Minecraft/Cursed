@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentModifierCurse;
+import net.darkhax.cursed.lib.EnchantmentModifierCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.inventory.EquipmentSlotType;

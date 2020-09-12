@@ -2,11 +2,11 @@ package net.darkhax.cursed.enchantments;
 
 import java.util.UUID;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentModifierCurse;
 import net.darkhax.cursed.CursedMod;
-import net.minecraft.entity.SharedMonsterAttributes;
+import net.darkhax.cursed.lib.EnchantmentModifierCurse;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.AttributeModifier.Operation;
+import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.inventory.EquipmentSlotType;
 
 public class EnchantmentMisfortune extends EnchantmentModifierCurse {
@@ -16,6 +16,6 @@ public class EnchantmentMisfortune extends EnchantmentModifierCurse {
     public EnchantmentMisfortune() {
         
         super(CursedMod.TOOL, EquipmentSlotType.MAINHAND);
-        this.addAttributeModifier(SharedMonsterAttributes.LUCK, this.modifier);
+        this.addAttributeModifier(Attributes.LUCK, this.modifier);
     }
 }

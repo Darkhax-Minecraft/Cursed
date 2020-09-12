@@ -1,6 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentCurse;
+import net.darkhax.cursed.lib.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
@@ -16,7 +16,7 @@ public class EnchantmentFading extends EnchantmentCurse {
     
     public EnchantmentFading() {
         
-        super(EnchantmentType.ALL, EquipmentSlotType.values());
+        super(EnchantmentType.VANISHABLE, EquipmentSlotType.values());
         MinecraftForge.EVENT_BUS.addListener(this::onEntityTick);
     }
     

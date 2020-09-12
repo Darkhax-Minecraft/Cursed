@@ -1,10 +1,11 @@
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[34,)"
 issueTrackerURL="https://github.com/Darkhax-Minecraft/Cursed/issues"
+license="LGPL v2.1"
 
 [[mods]]
 modId="cursed"
-updateJSONURL="https://updates.blamejared.com/get?n=cursed&gv=1.15.2"
+updateJSONURL="https://updates.blamejared.com/get?n=cursed&gv=1.16.3"
 version="${version}"
 displayName="${mod_name}"
 displayURL="${mod_download}"
@@ -17,20 +18,20 @@ ${mod_description}
 [[dependencies.cursed]]
     modId="forge"
     mandatory=true
-    versionRange="[31.1.18,)"
+    versionRange="[34,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.cursed]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.2]"
+    versionRange="[1.16.3]"
     ordering="NONE"
     side="BOTH"
 	
 [[dependencies.cursed]]
     modId="bookshelf"
     mandatory=true
-    versionRange="[5.5,)"
+    versionRange="[8,)"
     ordering="AFTER"
     side="BOTH"

@@ -1,31 +1,34 @@
 package net.darkhax.cursed.enchantments;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.List;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentTickingCurse;
+import net.darkhax.cursed.lib.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.MobEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.world.biome.Biome.SpawnListEntry;
-import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
+import net.minecraft.util.SoundEvents;
 
 public class EnchantmentEcho extends EnchantmentTickingCurse {
     
-    private final Method playSound = ObfuscationReflectionHelper.findMethod(MobEntity.class, "func_184639_G");
+    private final List<SoundEvent> sounds = new ArrayList<>();
     
     public EnchantmentEcho() {
         
         super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
+        this.sounds.add(SoundEvents.ENTITY_ZOMBIE_AMBIENT);
+        this.sounds.add(SoundEvents.ENTITY_SKELETON_SHOOT);
+        this.sounds.add(SoundEvents.ENTITY_CREEPER_PRIMED);
+        this.sounds.add(SoundEvents.ENTITY_PHANTOM_SWOOP);
+        this.sounds.add(SoundEvents.ENTITY_ELDER_GUARDIAN_CURSE);
+        this.sounds.add(SoundEvents.ENTITY_SPIDER_AMBIENT);
+        this.sounds.add(SoundEvents.ENTITY_BLAZE_SHOOT);
+        this.sounds.add(SoundEvents.ENTITY_TNT_PRIMED);
+        this.sounds.add(SoundEvents.ENTITY_ENDERMAN_SCREAM);
+        this.sounds.add(SoundEvents.ENTITY_GHAST_SCREAM);
+        this.sounds.add(SoundEvents.ENTITY_SLIME_JUMP);
     }
     
     @Override
@@ -33,58 +36,12 @@ public class EnchantmentEcho extends EnchantmentTickingCurse {
         
         if (!user.world.isRemote && level > 0 && Math.random() < 0.00233 * level) {
             
-            final LivingEntity randomMob = this.getMobForChunk(user.world, user.getPosition());
+            final SoundEvent sound = this.sounds.get(user.world.rand.nextInt(this.sounds.size()));
             
-            if (randomMob instanceof MobEntity) {
+            if (sound != null) {
                 
-                try {
-                    
-                    final SoundEvent sound = (SoundEvent) this.playSound.invoke(randomMob);
-                    
-                    if (sound != null) {
-                        
-                        user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), sound, SoundCategory.MASTER, 20f, 1f);
-                    }
-                }
-                
-                catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
-                    
-                }
+                user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), sound, SoundCategory.MASTER, 20f, 1f);
             }
         }
-    }
-    
-    private LivingEntity getMobForChunk (World world, BlockPos pos) {
-        
-        final Biome biome = world.getBiome(pos);
-        
-        if (biome != null) {
-            
-            final List<SpawnListEntry> validMobs = biome.getSpawns(EntityClassification.MONSTER);
-            
-            if (validMobs != null && !validMobs.isEmpty()) {
-                
-                final SpawnListEntry entry = validMobs.get(world.getRandom().nextInt(validMobs.size()));
-                
-                if (entry != null) {
-                    
-                    try {
-                        
-                        final Entity entity = entry.entityType.create(world);
-                        
-                        if (entity instanceof LivingEntity) {
-                            
-                            return (LivingEntity) entity;
-                        }
-                    }
-                    
-                    catch (final Exception e) {
-                        
-                    }
-                }
-            }
-        }
-        
-        return null;
     }
 }
