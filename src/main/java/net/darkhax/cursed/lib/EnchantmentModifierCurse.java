@@ -1,6 +1,5 @@
 package net.darkhax.cursed.lib;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentAttribute;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.inventory.EquipmentSlotType;
 

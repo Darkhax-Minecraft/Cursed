@@ -49,11 +49,5 @@ public class EnchantmentMidas extends EnchantmentModifierCurse {
             
             return new MidasModifier(conditions);
         }
-        
-        @Override
-        public JsonObject write (MidasModifier instance) {
-            
-            return new JsonObject();
-        }
     }
 }
