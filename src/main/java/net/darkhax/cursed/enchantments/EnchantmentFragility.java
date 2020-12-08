@@ -5,6 +5,7 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
@@ -30,7 +31,7 @@ public class EnchantmentFragility extends EnchantmentCurse {
         
         if (!event.getWorld().isRemote()) {
             
-            final LivingEntity user = event.getPlayer();
+            final PlayerEntity user = event.getPlayer();
             final ItemStack item = event.getPlayer().getHeldItemMainhand();
             final int level = EnchantmentHelper.getEnchantmentLevel(this, item);
             
@@ -38,7 +39,7 @@ public class EnchantmentFragility extends EnchantmentCurse {
                 
                 final ServerPlayerEntity damagerEntity = event.getPlayer() instanceof ServerPlayerEntity ? (ServerPlayerEntity) event.getPlayer() : null;
                 item.attemptDamageItem(1, event.getWorld().getRandom(), damagerEntity);
-                user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 1f, 1f);
             }
         }
     }
