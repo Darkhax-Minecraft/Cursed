@@ -21,6 +21,14 @@ import net.darkhax.cursed.enchantments.EnchantmentRuin;
 import net.darkhax.cursed.enchantments.EnchantmentSilence;
 import net.darkhax.cursed.enchantments.EnchantmentSinking;
 import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.network.play.server.SPlaySoundEffectPacket;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvent;
+import net.minecraftforge.common.util.FakePlayer;
+import net.minecraftforge.event.ForgeEventFactory;
+import net.minecraftforge.event.entity.PlaySoundAtEntityEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -54,5 +62,19 @@ public class CursedMod {
         this.registry.lootModifiers.register(EnchantmentMidas.SERIALIZER, "midas_modifier");
         
         this.registry.initialize(FMLJavaModLoadingContext.get().getModEventBus());
+    }
+    
+    public static void playSound (PlayerEntity target, double posX, double posY, double posZ, SoundEvent sound, SoundCategory category, float volume, float pitch) {
+        
+        if (target instanceof ServerPlayerEntity && !(target instanceof FakePlayer)) {
+            
+            final ServerPlayerEntity player = (ServerPlayerEntity) target;
+            final PlaySoundAtEntityEvent event = ForgeEventFactory.onPlaySoundAtEntity(player, sound, category, volume, pitch);
+            
+            if (player.connection != null && !event.isCanceled() && event.getSound() != null) {
+                
+                player.connection.send(new SPlaySoundEffectPacket(event.getSound(), event.getCategory(), posX, posY, posZ, event.getVolume(), event.getPitch()));
+            }
+        }
     }
 }

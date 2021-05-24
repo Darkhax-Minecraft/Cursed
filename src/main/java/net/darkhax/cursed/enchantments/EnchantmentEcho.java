@@ -3,9 +3,11 @@ package net.darkhax.cursed.enchantments;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.darkhax.cursed.CursedMod;
 import net.darkhax.cursed.lib.EnchantmentTickingCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -34,13 +36,13 @@ public class EnchantmentEcho extends EnchantmentTickingCurse {
     @Override
     public void onUserTick (LivingEntity user, int level) {
         
-        if (!user.level.isClientSide && level > 0 && Math.random() < 0.00233 * level) {
+        if (user instanceof ServerPlayerEntity && level > 0 && Math.random() < 0.00233 * level) {
             
             final SoundEvent sound = this.sounds.get(user.level.random.nextInt(this.sounds.size()));
             
             if (sound != null) {
                 
-                user.level.playSound(null, user.getX(), user.getY() + 1, user.getZ(), sound, SoundCategory.MASTER, 20f, 1f);
+                CursedMod.playSound((ServerPlayerEntity) user, user.getX(), user.getY() + 1, user.getZ(), sound, SoundCategory.MASTER, 20f, 1f);
             }
         }
     }

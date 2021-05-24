@@ -1,10 +1,11 @@
 package net.darkhax.cursed.enchantments;
 
 import net.darkhax.bookshelf.util.MathsUtils;
+import net.darkhax.cursed.CursedMod;
 import net.darkhax.cursed.lib.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
-import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
@@ -34,8 +35,8 @@ public class EnchantmentIgnorance extends EnchantmentCurse {
                 final ServerPlayerEntity damagerEntity = event.getPlayer() instanceof ServerPlayerEntity ? (ServerPlayerEntity) event.getPlayer() : null;
                 item.hurt(MathsUtils.nextIntInclusive(event.getWorld().getRandom(), 10, 20) * level, event.getWorld().getRandom(), damagerEntity);
                 
-                final LivingEntity user = event.getPlayer();
-                user.level.playSound(null, user.getX(), user.getY() + 1, user.getZ(), SoundEvents.SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                final PlayerEntity user = event.getPlayer();
+                CursedMod.playSound(user, user.getX(), user.getY() + 1, user.getZ(), SoundEvents.SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
             }
         }
     }

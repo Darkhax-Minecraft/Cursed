@@ -1,5 +1,6 @@
 package net.darkhax.cursed.enchantments;
 
+import net.darkhax.cursed.CursedMod;
 import net.darkhax.cursed.lib.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
@@ -39,7 +40,8 @@ public class EnchantmentFragility extends EnchantmentCurse {
                 
                 final ServerPlayerEntity damagerEntity = event.getPlayer() instanceof ServerPlayerEntity ? (ServerPlayerEntity) event.getPlayer() : null;
                 item.hurt(1, event.getWorld().getRandom(), damagerEntity);
-                user.level.playSound(null, user.getX(), user.getY() + 1, user.getZ(), SoundEvents.SHIELD_BREAK, SoundCategory.MASTER, 1f, 1f);
+                
+                CursedMod.playSound(damagerEntity, user.getX(), user.getY() + 1, user.getZ(), SoundEvents.SHIELD_BREAK, SoundCategory.MASTER, 1f, 1f);
             }
         }
     }
