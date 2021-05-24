@@ -24,18 +24,18 @@ public class EnchantmentIgnorance extends EnchantmentCurse {
     
     private void onBlockBreak (BlockEvent.BreakEvent event) {
         
-        if (!event.getWorld().isRemote()) {
+        if (!event.getWorld().isClientSide()) {
             
-            final ItemStack item = event.getPlayer().getHeldItemMainhand();
-            final int level = EnchantmentHelper.getEnchantmentLevel(this, item);
+            final ItemStack item = event.getPlayer().getMainHandItem();
+            final int level = EnchantmentHelper.getItemEnchantmentLevel(this, item);
             
             if (level > 0 && !item.getItem().canHarvestBlock(item, event.getState())) {
                 
                 final ServerPlayerEntity damagerEntity = event.getPlayer() instanceof ServerPlayerEntity ? (ServerPlayerEntity) event.getPlayer() : null;
-                item.attemptDamageItem(MathsUtils.nextIntInclusive(event.getWorld().getRandom(), 10, 20) * level, event.getWorld().getRandom(), damagerEntity);
+                item.hurt(MathsUtils.nextIntInclusive(event.getWorld().getRandom(), 10, 20) * level, event.getWorld().getRandom(), damagerEntity);
                 
                 final LivingEntity user = event.getPlayer();
-                user.world.playSound(null, user.getPosX(), user.getPosY() + 1, user.getPosZ(), SoundEvents.ITEM_SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
+                user.level.playSound(null, user.getX(), user.getY() + 1, user.getZ(), SoundEvents.SHIELD_BREAK, SoundCategory.MASTER, 20f, 1f);
             }
         }
     }

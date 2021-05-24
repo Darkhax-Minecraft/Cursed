@@ -20,16 +20,16 @@ public class EnchantmentCurtail extends EnchantmentModifierCurse {
         
         super(Rarity.VERY_RARE, EnchantmentType.DIGGER, EquipmentSlotType.MAINHAND);
     }
-
+    
     @Override
     public Map<Attribute, AttributeModifier> getModifiers (int level) {
         
-        if (modifiers == null) {
+        if (this.modifiers == null) {
             
-            modifiers = new HashMap<>();
-            modifiers.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(UUID.fromString("0b8f89c3-892f-4b71-bdca-58cc20ce8ee0"), "Curse of Curtail", -0.35d, Operation.MULTIPLY_TOTAL));
+            this.modifiers = new HashMap<>();
+            this.modifiers.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(UUID.fromString("0b8f89c3-892f-4b71-bdca-58cc20ce8ee0"), "Curse of Curtail", -0.35d, Operation.MULTIPLY_TOTAL));
         }
         
-        return modifiers;
+        return this.modifiers;
     }
 }

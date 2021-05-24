@@ -27,7 +27,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 @Mod("cursed")
 public class CursedMod {
     
-    public static final EnchantmentType TOOL = EnchantmentType.create("CURSED_TOOL", item -> EnchantmentType.DIGGER.canEnchantItem(item) || EnchantmentType.WEAPON.canEnchantItem(item));
+    public static final EnchantmentType TOOL = EnchantmentType.create("CURSED_TOOL", item -> EnchantmentType.DIGGER.canEnchant(item) || EnchantmentType.WEAPON.canEnchant(item));
     
     private final Logger log = LogManager.getLogger("Cursed");
     private final RegistryHelper registry = new RegistryHelper("cursed", this.log);

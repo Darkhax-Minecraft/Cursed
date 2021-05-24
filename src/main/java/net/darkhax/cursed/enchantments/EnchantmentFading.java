@@ -32,7 +32,7 @@ public class EnchantmentFading extends EnchantmentCurse {
                     
                     final ItemEntity itemEntity = (ItemEntity) entity;
                     
-                    final int fadingLevel = EnchantmentHelper.getEnchantmentLevel(this, itemEntity.getItem());
+                    final int fadingLevel = EnchantmentHelper.getItemEnchantmentLevel(this, itemEntity.getItem());
                     
                     if (fadingLevel > 0) {
                         

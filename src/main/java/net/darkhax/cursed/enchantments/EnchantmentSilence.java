@@ -18,7 +18,7 @@ public class EnchantmentSilence extends EnchantmentCurse {
     
     private void onEntitySound (PlaySoundAtEntityEvent event) {
         
-        if (event.getEntity() instanceof LivingEntity && EnchantmentHelper.getEnchantmentLevel(this, ((LivingEntity) event.getEntity()).getItemStackFromSlot(EquipmentSlotType.FEET)) > 0) {
+        if (event.getEntity() instanceof LivingEntity && EnchantmentHelper.getItemEnchantmentLevel(this, ((LivingEntity) event.getEntity()).getItemBySlot(EquipmentSlotType.FEET)) > 0) {
             
             event.setCanceled(true);
         }

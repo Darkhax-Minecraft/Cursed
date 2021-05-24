@@ -12,13 +12,13 @@ public class EnchantmentTickingCurse extends EnchantmentTicking {
     }
     
     @Override
-    public int getMinEnchantability (int level) {
+    public int getMinCost (int level) {
         
         return 25;
     }
     
     @Override
-    public int getMaxEnchantability (int level) {
+    public int getMaxCost (int level) {
         
         return 50;
     }
@@ -30,7 +30,7 @@ public class EnchantmentTickingCurse extends EnchantmentTicking {
     }
     
     @Override
-    public boolean isTreasureEnchantment () {
+    public boolean isTreasureOnly () {
         
         return true;
     }

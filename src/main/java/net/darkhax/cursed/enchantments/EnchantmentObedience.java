@@ -23,20 +23,20 @@ public class EnchantmentObedience extends EnchantmentTickingCurse {
         
         final CompoundNBT tag = item.getOrCreateTag();
         
-        if (tag.hasUniqueId(NBT_KEY)) {
+        if (tag.hasUUID(NBT_KEY)) {
             
-            final UUID ownerId = tag.getUniqueId(NBT_KEY);
+            final UUID ownerId = tag.getUUID(NBT_KEY);
             
-            if (!user.getUniqueID().equals(ownerId)) {
+            if (!user.getUUID().equals(ownerId)) {
                 
-                user.entityDropItem(item);
-                user.setItemStackToSlot(slot, ItemStack.EMPTY);
+                user.spawnAtLocation(item);
+                user.setItemSlot(slot, ItemStack.EMPTY);
             }
         }
         
         else {
             
-            tag.putUniqueId(NBT_KEY, user.getUniqueID());
+            tag.putUUID(NBT_KEY, user.getUUID());
         }
     }
 }

@@ -23,13 +23,13 @@ public class EnchantmentInsomnia extends EnchantmentCurse {
     
     private void playerSleepEvent (PlayerSleepInBedEvent event) {
         
-        final ItemStack helmet = event.getPlayer().getItemStackFromSlot(EquipmentSlotType.HEAD);
-        final int level = EnchantmentHelper.getEnchantmentLevel(this, helmet);
+        final ItemStack helmet = event.getPlayer().getItemBySlot(EquipmentSlotType.HEAD);
+        final int level = EnchantmentHelper.getItemEnchantmentLevel(this, helmet);
         
         if (level > 0 && event.getResultStatus() == null) {
             
             event.setResult(SleepResult.OTHER_PROBLEM);
-            event.getPlayer().sendStatusMessage(INSOMNIA_MESSAGE, true);
+            event.getPlayer().displayClientMessage(INSOMNIA_MESSAGE, true);
         }
     }
 }

@@ -19,7 +19,7 @@ public class EnchantmentRuin extends EnchantmentCurse {
     
     private void onAnvilUpdate (AnvilUpdateEvent event) {
         
-        if (EnchantmentHelper.getEnchantmentLevel(this, event.getLeft()) > 0 || EnchantmentHelper.getEnchantmentLevel(this, event.getRight()) > 0) {
+        if (EnchantmentHelper.getItemEnchantmentLevel(this, event.getLeft()) > 0 || EnchantmentHelper.getItemEnchantmentLevel(this, event.getRight()) > 0) {
             
             event.setOutput(ItemStack.EMPTY);
             event.setCanceled(true);

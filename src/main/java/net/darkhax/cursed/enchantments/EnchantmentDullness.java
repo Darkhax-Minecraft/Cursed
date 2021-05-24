@@ -15,14 +15,14 @@ public class EnchantmentDullness extends EnchantmentModifierCurse {
     }
     
     @Override
-    public float calcDamageByCreature (int level, CreatureAttribute creatureType) {
+    public float getDamageBonus (int level, CreatureAttribute creatureType) {
         
         return -(1.0F + Math.max(0, level - 1) * 0.5F);
     }
     
     @Override
-    public boolean canApply (ItemStack stack) {
+    public boolean canEnchant (ItemStack stack) {
         
-        return stack.getItem() instanceof AxeItem ? true : super.canApply(stack);
+        return stack.getItem() instanceof AxeItem ? true : super.canEnchant(stack);
     }
 }

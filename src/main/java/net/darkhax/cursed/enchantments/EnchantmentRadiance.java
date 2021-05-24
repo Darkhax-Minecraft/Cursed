@@ -19,7 +19,7 @@ public class EnchantmentRadiance extends EnchantmentTickingCurse {
         
         if (level > 0) {
             
-            user.addPotionEffect(new EffectInstance(Effects.GLOWING, 100, 0, false, false));
+            user.addEffect(new EffectInstance(Effects.GLOWING, 100, 0, false, false));
         }
     }
 }

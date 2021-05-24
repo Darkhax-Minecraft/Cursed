@@ -2,18 +2,21 @@ modLoader="javafml"
 loaderVersion="[36,]"
 issueTrackerURL="https://github.com/Darkhax-Minecraft/Cursed/issues"
 license="LGPL v2.1"
+logoFile="mod_logo.png"
+logoBlur=false
 
 [[mods]]
 modId="cursed"
 updateJSONURL="https://updates.blamejared.com/get?n=cursed&gv=1.16.5"
 version="${version}"
-displayName="${mod_name}"
-displayURL="${mod_download}"
-credits="${mod_credits}"
-authors="${mod_authors}"
+displayName="${modName}"
+displayURL="${modHomepage}"
+credits="${modCredits}"
+authors="${modAuthor}"
 description='''
-${mod_description}
+${modDescription}
 '''
+itemIcon="minecraft:enchanted_book"
 
 [[dependencies.cursed]]
     modId="forge"
@@ -28,7 +31,7 @@ ${mod_description}
     versionRange="[1.16.5]"
     ordering="NONE"
     side="BOTH"
-	
+    
 [[dependencies.cursed]]
     modId="bookshelf"
     mandatory=true

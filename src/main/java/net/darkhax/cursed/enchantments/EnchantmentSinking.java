@@ -16,11 +16,11 @@ public class EnchantmentSinking extends EnchantmentTickingCurse {
     @Override
     public void onUserTick (LivingEntity user, int level) {
         
-        if (level > 0 && user.isInWaterOrBubbleColumn()) {
+        if (level > 0 && user.isInWaterOrBubble()) {
             
-            final Vector3d motion = user.getMotion();
+            final Vector3d motion = user.getDeltaMovement();
             
-            user.setMotion(motion.getX(), Math.max(-0.09f, motion.getY() - 0.1f), motion.getZ());
+            user.setDeltaMovement(motion.x(), Math.max(-0.09f, motion.y() - 0.1f), motion.z());
         }
     }
 }

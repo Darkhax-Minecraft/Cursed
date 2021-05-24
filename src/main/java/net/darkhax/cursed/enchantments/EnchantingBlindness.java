@@ -19,7 +19,7 @@ public class EnchantingBlindness extends EnchantmentTickingCurse {
         
         if (level > 0) {
             
-            user.addPotionEffect(new EffectInstance(Effects.BLINDNESS, 100, 0, false, false));
+            user.addEffect(new EffectInstance(Effects.BLINDNESS, 100, 0, false, false));
         }
     }
 }
