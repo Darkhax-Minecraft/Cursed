@@ -8,7 +8,7 @@ import javax.annotation.Nonnull;
 import com.google.gson.JsonObject;
 
 import net.darkhax.cursed.CursedMod;
-import net.darkhax.cursed.lib.EnchantmentModifierCurse;
+import net.darkhax.cursed.lib.EnchantmentCurse;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -18,7 +18,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.common.loot.LootModifier;
 
-public class EnchantmentMidas extends EnchantmentModifierCurse {
+public class EnchantmentMidas extends EnchantmentCurse {
     
     public static final GlobalLootModifierSerializer<MidasModifier> SERIALIZER = new Serializer();
     

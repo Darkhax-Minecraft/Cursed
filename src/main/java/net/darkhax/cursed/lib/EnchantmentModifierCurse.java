@@ -1,48 +1,27 @@
 package net.darkhax.cursed.lib;
 
-import net.darkhax.bookshelf.enchantment.EnchantmentAttribute;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.ItemAttributeModifierEvent;
 
-public class EnchantmentModifierCurse extends EnchantmentAttribute {
+public abstract class EnchantmentModifierCurse extends EnchantmentCurse {
     
     public EnchantmentModifierCurse(EnchantmentType type, EquipmentSlotType... slots) {
         
-        this(Rarity.VERY_RARE, type, slots);
+        super(type, slots);
+        MinecraftForge.EVENT_BUS.addListener(this::checkModifiers);
     }
     
-    public EnchantmentModifierCurse(Rarity rarity, EnchantmentType type, EquipmentSlotType... slots) {
+    private void checkModifiers (ItemAttributeModifierEvent event) {
         
-        super(rarity, type, slots);
+        if (this.isValidSlot(event.getSlotType()) && event.getItemStack().hasTag()) {
+            
+            final int level = EnchantmentHelper.getItemEnchantmentLevel(this, event.getItemStack());
+            this.applyModifiers(level, event);
+        }
     }
     
-    @Override
-    public int getMinCost (int level) {
-        
-        return 25;
-    }
-    
-    @Override
-    public int getMaxCost (int level) {
-        
-        return 50;
-    }
-    
-    @Override
-    public int getMaxLevel () {
-        
-        return 1;
-    }
-    
-    @Override
-    public boolean isTreasureOnly () {
-        
-        return true;
-    }
-    
-    @Override
-    public boolean isCurse () {
-        
-        return true;
-    }
+    public abstract void applyModifiers (int level, ItemAttributeModifierEvent event);
 }

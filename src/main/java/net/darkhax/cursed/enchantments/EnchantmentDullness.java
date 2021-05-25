@@ -1,17 +1,17 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.cursed.lib.EnchantmentModifierCurse;
+import net.darkhax.cursed.lib.EnchantmentCurse;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.ItemStack;
 
-public class EnchantmentDullness extends EnchantmentModifierCurse {
+public class EnchantmentDullness extends EnchantmentCurse {
     
     public EnchantmentDullness() {
         
-        super(Rarity.VERY_RARE, EnchantmentType.WEAPON, EquipmentSlotType.MAINHAND);
+        super(EnchantmentType.WEAPON, EquipmentSlotType.MAINHAND);
     }
     
     @Override
@@ -23,6 +23,6 @@ public class EnchantmentDullness extends EnchantmentModifierCurse {
     @Override
     public boolean canEnchant (ItemStack stack) {
         
-        return stack.getItem() instanceof AxeItem ? true : super.canEnchant(stack);
+        return stack.getItem() instanceof AxeItem || super.canEnchant(stack);
     }
 }

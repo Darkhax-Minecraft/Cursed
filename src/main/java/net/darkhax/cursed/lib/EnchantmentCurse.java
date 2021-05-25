@@ -14,7 +14,7 @@ public class EnchantmentCurse extends Enchantment {
         this.slots = slots;
     }
     
-    public EquipmentSlotType[] getSlots() {
+    public EquipmentSlotType[] getSlots () {
         
         return this.slots;
     }
@@ -47,5 +47,18 @@ public class EnchantmentCurse extends Enchantment {
     public boolean isCurse () {
         
         return true;
+    }
+    
+    public boolean isValidSlot (EquipmentSlotType slot) {
+        
+        for (final EquipmentSlotType validSlot : this.slots) {
+            
+            if (validSlot == slot) {
+                
+                return true;
+            }
+        }
+        
+        return false;
     }
 }

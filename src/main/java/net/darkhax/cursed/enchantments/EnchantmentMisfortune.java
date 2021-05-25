@@ -8,6 +8,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraftforge.event.ItemAttributeModifierEvent;
 
 public class EnchantmentMisfortune extends EnchantmentModifierCurse {
     
@@ -16,6 +17,14 @@ public class EnchantmentMisfortune extends EnchantmentModifierCurse {
     public EnchantmentMisfortune() {
         
         super(CursedMod.TOOL, EquipmentSlotType.MAINHAND);
-        this.addAttributeModifier(Attributes.LUCK, this.modifier);
+    }
+    
+    @Override
+    public void applyModifiers (int level, ItemAttributeModifierEvent event) {
+        
+        if (level > 1) {
+            
+            event.addModifier(Attributes.LUCK, this.modifier);
+        }
     }
 }
