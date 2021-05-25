@@ -6,9 +6,17 @@ import net.minecraft.inventory.EquipmentSlotType;
 
 public class EnchantmentCurse extends Enchantment {
     
+    private final EquipmentSlotType[] slots;
+    
     public EnchantmentCurse(EnchantmentType type, EquipmentSlotType... slots) {
         
         super(Rarity.VERY_RARE, type, slots);
+        this.slots = slots;
+    }
+    
+    public EquipmentSlotType[] getSlots() {
+        
+        return this.slots;
     }
     
     @Override

@@ -1,25 +1,35 @@
 package net.darkhax.cursed.enchantments;
 
-import net.darkhax.cursed.lib.EnchantmentTickingCurse;
+import net.darkhax.cursed.lib.EnchantmentCurse;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 
-public class EnchantingBlindness extends EnchantmentTickingCurse {
+public class EnchantingBlindness extends EnchantmentCurse {
     
     public EnchantingBlindness() {
         
-        super(Rarity.VERY_RARE, EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
+        super(EnchantmentType.ARMOR_HEAD, EquipmentSlotType.HEAD);
+        MinecraftForge.EVENT_BUS.addListener(this::onUserTick);
     }
     
-    @Override
-    public void onUserTick (LivingEntity user, int level) {
+    private void onUserTick (LivingUpdateEvent event) {
         
-        if (level > 0) {
+        final LivingEntity user = event.getEntityLiving();
+        
+        if (user != null && !user.level.isClientSide && user.isAlive() && user.tickCount % 10 == 0) {
             
-            user.addEffect(new EffectInstance(Effects.BLINDNESS, 100, 0, false, false));
+            final int level = EnchantmentHelper.getEnchantmentLevel(this, user);
+            
+            if (level > 0) {
+                
+                user.addEffect(new EffectInstance(Effects.BLINDNESS, 50, level, false, false));
+            }
         }
     }
 }
