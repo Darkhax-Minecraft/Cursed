@@ -45,7 +45,7 @@ public class EnchantmentEcho extends EnchantmentCurse {
         if (user instanceof ServerPlayerEntity && !user.level.isClientSide && user.isAlive() && user.tickCount % 1200 == 0 && user.getRandom().nextDouble() < 0.20) {
             
             final int level = EnchantmentHelper.getEnchantmentLevel(this, user);
-
+            
             if (level > 0) {
                 
                 final SoundEvent sound = this.sounds.get(user.level.random.nextInt(this.sounds.size()));

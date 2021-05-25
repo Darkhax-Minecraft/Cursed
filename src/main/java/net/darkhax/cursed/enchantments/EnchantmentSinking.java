@@ -27,7 +27,7 @@ public class EnchantmentSinking extends EnchantmentCurse {
             
             if (level > 0) {
                 
-                final Vector3d motion = user.getDeltaMovement();            
+                final Vector3d motion = user.getDeltaMovement();
                 user.setDeltaMovement(motion.x(), -0.05, motion.z());
             }
         }

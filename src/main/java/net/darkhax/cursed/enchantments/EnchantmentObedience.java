@@ -28,7 +28,7 @@ public class EnchantmentObedience extends EnchantmentCurse {
         
         if (user != null && !user.level.isClientSide && user.isAlive() && user.tickCount % 10 == 0) {
             
-            for (EquipmentSlotType slot : this.getSlots()) {
+            for (final EquipmentSlotType slot : this.getSlots()) {
                 
                 final ItemStack stack = event.getEntityLiving().getItemBySlot(slot);
                 
