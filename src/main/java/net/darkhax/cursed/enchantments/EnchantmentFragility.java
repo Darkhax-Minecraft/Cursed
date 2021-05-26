@@ -48,9 +48,10 @@ public class EnchantmentFragility extends EnchantmentCurse {
     
     private void onLivingHurt (LivingHurtEvent event) {
         
-        if (event.getEntityLiving() != null && !event.getEntityLiving().level.isClientSide) {
+        if (event.getEntityLiving() != null && !event.getEntityLiving().level.isClientSide && event.getSource() != null && !event.getSource().isBypassArmor()) {
             
             final LivingEntity user = event.getEntityLiving();
+            
             for (final ItemStack item : event.getEntityLiving().getArmorSlots()) {
                 
                 final int level = EnchantmentHelper.getItemEnchantmentLevel(this, item);
