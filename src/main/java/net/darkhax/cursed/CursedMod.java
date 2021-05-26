@@ -1,5 +1,7 @@
 package net.darkhax.cursed;
 
+import java.util.Collection;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,10 +23,12 @@ import net.darkhax.cursed.enchantments.EnchantmentRadiance;
 import net.darkhax.cursed.enchantments.EnchantmentRuin;
 import net.darkhax.cursed.enchantments.EnchantmentSilence;
 import net.darkhax.cursed.enchantments.EnchantmentSinking;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.network.play.server.SPlaySoundEffectPacket;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -40,32 +44,38 @@ public class CursedMod {
     public static final EnchantmentType TOOL = EnchantmentType.create("CURSED_TOOL", item -> EnchantmentType.DIGGER.canEnchant(item) || EnchantmentType.WEAPON.canEnchant(item));
     public static final EquipmentSlotType[] ARMOR_SLOTS = { EquipmentSlotType.HEAD, EquipmentSlotType.CHEST, EquipmentSlotType.LEGS, EquipmentSlotType.FEET };
     
-    private final Logger log = LogManager.getLogger("Cursed");
-    private final RegistryHelper registry = new RegistryHelper("cursed", this.log);
+    private static final Logger LOG = LogManager.getLogger("Cursed");
+    private static final ItemGroup GROUP = new ItemGroupCursed();
+    private static final RegistryHelper REGISTRY = new RegistryHelper("cursed", LOG).withItemGroup(GROUP);
     
     public CursedMod() {
         
-        this.registry.enchantments.register(new EnchantingBlindness(), "blindness");
-        this.registry.enchantments.register(new EnchantmentCurtail(), "curtail");
-        this.registry.enchantments.register(new EnchantmentEcho(), "echo");
-        this.registry.enchantments.register(new EnchantmentEncumbrance(), "encumbrance");
-        this.registry.enchantments.register(new EnchantmentFading(), "fading");
-        this.registry.enchantments.register(new EnchantmentFragility(), "fragility");
-        this.registry.enchantments.register(new EnchantmentIgnorance(), "ignorance");
-        this.registry.enchantments.register(new EnchantmentInsomnia(), "insomnia");
-        this.registry.enchantments.register(new EnchantmentMidas(), "midas");
-        this.registry.enchantments.register(new EnchantmentMisfortune(), "misfortune");
-        this.registry.enchantments.register(new EnchantmentObedience(), "obedience");
-        this.registry.enchantments.register(new EnchantmentRadiance(), "radiance");
-        this.registry.enchantments.register(new EnchantmentSilence(), "silence");
-        this.registry.enchantments.register(new EnchantmentSinking(), "sinking");
-        this.registry.enchantments.register(new EnchantmentRuin(), "ruin");
-        this.registry.enchantments.register(new EnchantmentDullness(), "dullness");
-        this.registry.enchantments.register(new EnchantmentDelicacy(), "delicacy");
+        REGISTRY.enchantments.register(new EnchantingBlindness(), "blindness");
+        REGISTRY.enchantments.register(new EnchantmentCurtail(), "curtail");
+        REGISTRY.enchantments.register(new EnchantmentEcho(), "echo");
+        REGISTRY.enchantments.register(new EnchantmentEncumbrance(), "encumbrance");
+        REGISTRY.enchantments.register(new EnchantmentFading(), "fading");
+        REGISTRY.enchantments.register(new EnchantmentFragility(), "fragility");
+        REGISTRY.enchantments.register(new EnchantmentIgnorance(), "ignorance");
+        REGISTRY.enchantments.register(new EnchantmentInsomnia(), "insomnia");
+        REGISTRY.enchantments.register(new EnchantmentMidas(), "midas");
+        REGISTRY.enchantments.register(new EnchantmentMisfortune(), "misfortune");
+        REGISTRY.enchantments.register(new EnchantmentObedience(), "obedience");
+        REGISTRY.enchantments.register(new EnchantmentRadiance(), "radiance");
+        REGISTRY.enchantments.register(new EnchantmentSilence(), "silence");
+        REGISTRY.enchantments.register(new EnchantmentSinking(), "sinking");
+        REGISTRY.enchantments.register(new EnchantmentRuin(), "ruin");
+        REGISTRY.enchantments.register(new EnchantmentDullness(), "dullness");
+        REGISTRY.enchantments.register(new EnchantmentDelicacy(), "delicacy");
         
-        this.registry.lootModifiers.register(EnchantmentMidas.SERIALIZER, "midas_modifier");
+        REGISTRY.lootModifiers.register(EnchantmentMidas.SERIALIZER, "midas_modifier");
         
-        this.registry.initialize(FMLJavaModLoadingContext.get().getModEventBus());
+        REGISTRY.initialize(FMLJavaModLoadingContext.get().getModEventBus());
+    }
+    
+    public static Collection<Enchantment> getEnchantments () {
+        
+        return REGISTRY.enchantments.getValues();
     }
     
     public static void playSound (PlayerEntity target, double posX, double posY, double posZ, SoundEvent sound, SoundCategory category, float volume, float pitch) {
