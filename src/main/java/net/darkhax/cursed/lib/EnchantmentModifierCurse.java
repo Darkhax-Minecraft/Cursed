@@ -2,6 +2,7 @@ package net.darkhax.cursed.lib;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.entity.MobEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.ItemAttributeModifierEvent;
@@ -16,7 +17,7 @@ public abstract class EnchantmentModifierCurse extends EnchantmentCurse {
     
     private void checkModifiers (ItemAttributeModifierEvent event) {
         
-        if (this.isValidSlot(event.getSlotType()) && event.getItemStack().hasTag()) {
+        if (event.getSlotType() == MobEntity.getEquipmentSlotForItem(event.getItemStack()) && this.isValidSlot(event.getSlotType()) && event.getItemStack().hasTag()) {
             
             final int level = EnchantmentHelper.getItemEnchantmentLevel(this, event.getItemStack());
             this.applyModifiers(level, event);
