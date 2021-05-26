@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import net.darkhax.bookshelf.registry.RegistryHelper;
 import net.darkhax.cursed.enchantments.EnchantingBlindness;
 import net.darkhax.cursed.enchantments.EnchantmentCurtail;
+import net.darkhax.cursed.enchantments.EnchantmentDelicacy;
 import net.darkhax.cursed.enchantments.EnchantmentDullness;
 import net.darkhax.cursed.enchantments.EnchantmentEcho;
 import net.darkhax.cursed.enchantments.EnchantmentEncumbrance;
@@ -23,6 +24,7 @@ import net.darkhax.cursed.enchantments.EnchantmentSinking;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.network.play.server.SPlaySoundEffectPacket;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -36,6 +38,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 public class CursedMod {
     
     public static final EnchantmentType TOOL = EnchantmentType.create("CURSED_TOOL", item -> EnchantmentType.DIGGER.canEnchant(item) || EnchantmentType.WEAPON.canEnchant(item));
+    public static final EquipmentSlotType[] ARMOR_SLOTS = { EquipmentSlotType.HEAD, EquipmentSlotType.CHEST, EquipmentSlotType.LEGS, EquipmentSlotType.FEET };
     
     private final Logger log = LogManager.getLogger("Cursed");
     private final RegistryHelper registry = new RegistryHelper("cursed", this.log);
@@ -58,6 +61,7 @@ public class CursedMod {
         this.registry.enchantments.register(new EnchantmentSinking(), "sinking");
         this.registry.enchantments.register(new EnchantmentRuin(), "ruin");
         this.registry.enchantments.register(new EnchantmentDullness(), "dullness");
+        this.registry.enchantments.register(new EnchantmentDelicacy(), "delicacy");
         
         this.registry.lootModifiers.register(EnchantmentMidas.SERIALIZER, "midas_modifier");
         
